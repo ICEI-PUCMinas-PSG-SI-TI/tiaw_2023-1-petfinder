@@ -1,0 +1,48 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(91, 91, 240);
+}
+
+h1{
+    text-align: center;
+    color: white;
+    margin-bottom: 70px;
+    font-size: 40pt;
+}
+
+div img{
+    width: 200px;
+    padding-left: 500px;
+}
+
+section{
+    margin: 0 auto;
+    padding: 25px;
+    align-content:  center;
+    background-color:  white;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid;
+    width: 700px;
+    box-shadow: inset 5px 5px 10px black;
+}
+
+button{
+    width: 100%;
+    margin-top: 10px;
+    height: 40px;
+    background-color: rgb(91, 91, 240);
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+input{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid;
+    height: 25px;
+}
+
+.conta{
+    text-align: center;
+}
