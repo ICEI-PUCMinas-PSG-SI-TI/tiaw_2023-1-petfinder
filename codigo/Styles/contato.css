@@ -1,7 +1,20 @@
-.fale-conosco-container {
-  width: 50%;
-  margin: 0 auto;
-}
 body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(91, 91, 240);
+}
+
+.contato-container {
+  width: 40%;
+  margin: 0 auto;
   background-color: #292929;
+  border-radius: 14px;
+}
+.espacamento-form {
+  padding: 0 20px 20px 10px;
+}
+.contato-container > h1 {
+  text-align: center;
+  color: white;
+  padding: 50px 0 30px 0 !important;
+  font-size: 40pt;
 }

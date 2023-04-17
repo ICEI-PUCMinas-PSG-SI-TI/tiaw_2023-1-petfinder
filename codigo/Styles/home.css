@@ -49,9 +49,7 @@ body {
 }
 
 /*Footer*/
-.footer-color {
-  background-color: rgba(8, 44, 135, 0.647);
-}
+
 /*Responsividade*/
 @media screen and (max-width: 991px) {
   .container-cadastro-ong {
