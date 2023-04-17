@@ -1,0 +1,60 @@
+body {
+  background-blend-mode: overlay;
+}
+/*Cadastro e login*/
+.container-cadastro-ong {
+  margin: 0 40px;
+  width: 550px;
+  height: 190px;
+}
+.animal {
+  position: relative;
+  display: block;
+  height: 500px;
+}
+
+.animal::before {
+  content: "";
+  background-image: url("https://i1.wp.com/petanjo.com/blog/wp-content/uploads/2021/12/animais-de-estima%C3%A7%C3%A3o-ex%C3%B3ticos-2.jpg?resize=584%2C374&ssl=1");
+  opacity: 0.4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -3;
+}
+.container-cadastro-ong > h3,
+.container-cadastro-ong > p,
+.perdido > .text-center > h1 {
+  color: rgb(226, 113, 0);
+  z-index: 12;
+}
+/*Animal perdido*/
+.perdido {
+  background-image: url("../img/fundo\ 1.jpg");
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+/*carrossel*/
+
+.img-carrossel {
+  height: 300px;
+}
+
+/*Footer*/
+.footer-color {
+  background-color: rgba(8, 44, 135, 0.647);
+}
+/*Responsividade*/
+@media screen and (max-width: 991px) {
+  .container-cadastro-ong {
+    width: 319px;
+  }
+}
