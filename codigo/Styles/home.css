@@ -1,5 +1,21 @@
 body {
   background-blend-mode: overlay;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/*div {
+  border: 1px solid;
+}*/
+/*navbar*/
+header {
+  padding: 0 200px 0 200px;
+  background-color: rgb(91, 91, 240);
+}
+.navbar ul li a {
+  color: #000;
+}
+.navbar ul li a:hover {
+  color: #ffff;
 }
 /*Cadastro e login*/
 .container-cadastro-ong {
@@ -27,12 +43,13 @@ body {
   left: 0;
   z-index: -3;
 }
+/*
 .container-cadastro-ong > h3,
 .container-cadastro-ong > p,
 .perdido > .text-center > h1 {
   color: rgb(226, 113, 0);
-  z-index: 12;
 }
+*/
 /*Animal perdido*/
 .perdido {
   background-image: url("../img/fundo\ 1.jpg");
@@ -54,5 +71,8 @@ body {
 @media screen and (max-width: 991px) {
   .container-cadastro-ong {
     width: 319px;
+  }
+  header {
+    padding: 0 10px 0 10px;
   }
 }
