@@ -1,6 +1,6 @@
 body {
   background-blend-mode: overlay;
-  font-family: Arial, Helvetica, sans-serif !important;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*div {
@@ -8,14 +8,16 @@ body {
 }*/
 /*navbar*/
 header {
-  padding: 0 200px 0 200px;
-  background-color: rgb(91, 91, 240);
+  padding: 0 200px 0 100px;
+  margin: 0 0 20px 0;
+  background-color: #5271ff;
 }
 .navbar ul li a {
-  color: #000;
-}
-.navbar ul li a:hover {
   color: #ffff;
+}
+.navbar ul li a:hover,
+.navbar ul li .nav-link.active {
+  color: #ff6347;
 }
 /*Cadastro e login*/
 .container-cadastro-ong {
@@ -52,7 +54,7 @@ header {
 */
 /*Animal perdido*/
 .perdido {
-  background-image: url("../img/fundo\ 1.jpg");
+  background-image: url();
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
