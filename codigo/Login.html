@@ -36,10 +36,9 @@
               required
             />
           </div>
-          <div>
-            <button class="btn btn-outline-warning" type="submit">
-              Enviar
-            </button>
+          <div class="botoes">
+            <a href="/codigo/Home.html"><input type="button" class="btn btn-outline-warning" value="Voltar"></a>
+            <a href="/codigo/Home.html"><input type="button" class="btn btn-outline-warning" onclick="login()" value="Login"></a>
           </div>
         </form>
       </div>
@@ -50,4 +49,11 @@
       crossorigin="anonymous"
     ></script>
   </body>
+
+  <script>
+    function login() {
+      alert("Login realizado com Sucesso!")
+    }
+  </script>
+
 </html>
