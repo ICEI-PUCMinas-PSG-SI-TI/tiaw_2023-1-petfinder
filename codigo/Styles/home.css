@@ -1,6 +1,6 @@
 body {
-  background-blend-mode: overlay;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #cacaca62;
 }
 
 /*div {
@@ -10,19 +10,26 @@ body {
 header {
   padding: 0 200px 0 100px;
   margin: 0 0 20px 0;
-  background-color: #5271ff;
 }
-.navbar ul li a {
-  color: #ffff;
-}
+
 .navbar ul li a:hover,
-.navbar ul li .nav-link.active {
+.navbar ul li .nav-link.active,
+ul li .nav-link:hover {
   color: #ff6347;
+}
+/*BOTOES*/
+.color-button {
+  background-color: #ff6347;
+  color: white;
+}
+.color-button:hover {
+  background-color: #303079;
+  color: white;
 }
 /*Cadastro e login*/
 .container-cadastro-ong {
   margin: 0 40px;
-  width: 550px;
+  width: 460px;
   height: 190px;
 }
 .animal {
@@ -45,13 +52,15 @@ header {
   left: 0;
   z-index: -3;
 }
-/*
+.navbar ul li a,
 .container-cadastro-ong > h3,
 .container-cadastro-ong > p,
-.perdido > .text-center > h1 {
-  color: rgb(226, 113, 0);
+.perdido > .text-center > h1,
+ul li .nav-link,
+footer > div > p {
+  color: #303079;
 }
-*/
+
 /*Animal perdido*/
 .perdido {
   background-image: url();
