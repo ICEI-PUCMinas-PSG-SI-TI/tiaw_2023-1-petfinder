@@ -19,4 +19,4 @@ O objetivo do nosso site é ajudar os usuários que perderam o seu querido pet a
 https://trello.com/b/3zSomcAw/findpet
 
 ## Instruções para uso
-Coloque aqui as instruções para acessar a página inicial do projeto (caminho completo do arquivo).
+Comece pela página ./Home.html
