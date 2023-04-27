@@ -182,7 +182,7 @@ A tabela que segue apresenta os requisitos funcionais do projeto.
 
 ## Wireframes
 
-(images/Wireframeprincipal.jpeg)
+[Exemplo de Link para Wireframe](images/Wireframeprincipal.jpeg)
 
 > Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a
 > estrutura de um site web e seu relacionamentos entre suas
