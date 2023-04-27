@@ -10,6 +10,17 @@ O objetivo do nosso site é ajudar os usuários que perderam o seu querido pet a
 * Mateus Matias Esteves
 * Miguel Sanches Braga Inácio
 
+## Sprint 1 (15 pontos)
+### Documentação
+**ATENÇÃO: o arquivo docs/relatorio/Relatorio Tecnico - TEMPLATE.md deve conter a documentação do projeto. Este arquivo é obrigatório. Enquanto esta questão não for resolvida, a nota desta parte (3 pontos) está zerada.**
+- Folha de detalhamento do problema 
+- Persona(s)
+- Histórias de usuários prioritárias (pelo menos 3)
+- Wireframes apresentados no vídeo.
+
+### Observações sobre a apresentação 
+A apresentação, no geral, foi boa. O problema maior foi a falta de conexão entre as partes: não deu uma ideia de produto bem acabado; ficou parecendo que foi feita uma colagem de apresentações individuais. Isso não pode acontecer na apresentação de um produto que deve "ser vendido".
+
 ## Professores responsáveis
 
 * Gabriel Barbosa da Fonseca
