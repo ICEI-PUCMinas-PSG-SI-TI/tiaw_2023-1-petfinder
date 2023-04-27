@@ -146,7 +146,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |                      |                                             | de cuidar dele.                     |
 | -------------------- | ------------------------------------------  | ----------------------------------- |
 | Pessoa que encontrou | Um forma eficiente de encontrar             | Para devolver o animal ao seu       |
-| um cachorro perdido. | o dono do gato.                             | respectivo dono.                    |
+| um cachorro perdido. | o dono do cachorro.                             | respectivo dono.                    |
 
 > Seguindo o modelo acima, apresente aqui as histórias de usuário que são relevantes para o
 > projeto de sua solução. As Histórias de Usuário consistem em uma
