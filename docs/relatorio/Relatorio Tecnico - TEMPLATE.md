@@ -92,7 +92,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |                      |                                             | de cuidar dele.                     |
 | -------------------- | ------------------------------------------  | ----------------------------------- |
 | Pessoa que encontrou | Um forma eficiente de encontrar             | Para devolver o animal ao seu       |
-| um cachorro perdido. | o dono do gato.                             | respectivo dono.                    |
+| um cachorro perdido. | o dono do cachorro.                             | respectivo dono.                    |
 
 ## Requisitos
 
