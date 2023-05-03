@@ -38,6 +38,7 @@ header {
 .animal {
   background: url("https://i1.wp.com/petanjo.com/blog/wp-content/uploads/2021/12/animais-de-estima%C3%A7%C3%A3o-ex%C3%B3ticos-2.jpg?resize=584%2C374&ssl=1")
     no-repeat center;
+  background-attachment: fixed;
   background-size: cover;
   height: 500px;
   position: relative;
