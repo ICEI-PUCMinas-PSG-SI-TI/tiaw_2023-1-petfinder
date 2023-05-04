@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@500&display=swap");
+
 body {
   font-family: "Hind";
   background-color: rgba(91, 91, 240, 0.877) !important;
@@ -12,42 +13,20 @@ header {
   padding: 0 200px 0 100px;
   margin: 0 0 20px 0;
 }
+
 .copyright,
 .perdido div h1,
 .navbar ul li a {
   color: #f2f2f2;
 }
+
 .navbar ul li a:hover,
 .navbar ul li .nav-link.active {
   color: #ff6347;
 }
-/*Cadastro e login*/
-.container-cadastro-ong {
-  margin: 0 20px;
-  padding: 50px 20px 50px 20px;
-  width: 475px;
-  height: 250px;
-  color: #f2f2f2;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
 
-.animal {
-  background: url("https://i1.wp.com/petanjo.com/blog/wp-content/uploads/2021/12/animais-de-estima%C3%A7%C3%A3o-ex%C3%B3ticos-2.jpg?resize=584%2C374&ssl=1")
-    no-repeat center;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 500px;
-  position: relative;
-  opacity: 0.9;
-}
-
-/*Animal perdido*/
-.perdido {
-  height: 500px;
+.container {
+  padding-right: 100px;
 }
 
 #animaisPerdidos {
@@ -55,28 +34,11 @@ header {
   text-align: center;
   margin: 50px;
   font-size: 70px;
-} 
-
-#buttonPerdidos {
-  margin-top: 20px;
 }
 
-/*Card*/
-.card {
-  margin: 20px 0 0 0;
-  padding: 15px 10px 10px 10px;
+.paginator {
+  margin-top: 50px;
 }
-/*carrossel*/
-
-.img-carrossel {
-  height: 300px;
-}
-
-.descrição {
-  font-weight: 100;
-}
-
-/*Footer*/
 
 .footer-dark {
   padding: 50px 0 0 0;
@@ -122,7 +84,7 @@ header {
   text-align: center;
 }
 
-.footer-dark .item.social > a {
+.footer-dark .item.social>a {
   display: inline-block;
   border-radius: 50%;
   margin: 0 8px;
@@ -130,7 +92,7 @@ header {
   opacity: 0.75;
 }
 
-.footer-dark .item.social > a:hover {
+.footer-dark .item.social>a:hover {
   opacity: 0.9;
   background-color: #ff6347;
 }
@@ -148,6 +110,7 @@ header {
   .container-cadastro-ong {
     width: 319px;
   }
+
   header {
     padding: 0 10px 0 10px;
   }
