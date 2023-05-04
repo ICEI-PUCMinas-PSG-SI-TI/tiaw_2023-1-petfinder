@@ -60,6 +60,10 @@ header {
   height: 300px;
 }
 
+.descrição {
+  font-weight: 100;
+}
+
 /*Footer*/
 
 .footer-dark {
