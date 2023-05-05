@@ -32,8 +32,12 @@ header {
 #animaisPerdidos {
   color: #fff;
   text-align: center;
-  margin: 50px;
+  margin: 0 auto;
   font-size: 70px;
+}
+
+.card {
+  width: 300px;
 }
 
 .paginator {
@@ -84,7 +88,7 @@ header {
   text-align: center;
 }
 
-.footer-dark .item.social>a {
+.footer-dark .item.social > a {
   display: inline-block;
   border-radius: 50%;
   margin: 0 8px;
@@ -92,7 +96,7 @@ header {
   opacity: 0.75;
 }
 
-.footer-dark .item.social>a:hover {
+.footer-dark .item.social > a:hover {
   opacity: 0.9;
   background-color: #ff6347;
 }
