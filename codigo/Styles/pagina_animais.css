@@ -9,24 +9,10 @@ body {
   border: 1px solid;
 }*/
 /*navbar*/
-header {
-  padding: 0 200px 0 100px;
-  margin: 0 0 20px 0;
-}
-
-.copyright,
-.perdido div h1,
-.navbar ul li a {
-  color: #f2f2f2;
-}
 
 .navbar ul li a:hover,
 .navbar ul li .nav-link.active {
   color: #ff6347;
-}
-
-.container {
-  padding-right: 100px;
 }
 
 #animaisPerdidos {
@@ -36,102 +22,14 @@ header {
   font-size: 70px;
 }
 
-.card {
-  width: 300px;
-}
-
-.paginator {
-  margin-top: 50px;
-}
-
-.footer-dark {
-  padding: 50px 0 0 0;
-  margin: 40px 0 0 0;
-  color: #f0f9ff;
-}
-
-.footer-dark h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.footer-dark ul {
-  padding: 0;
-  list-style: none;
-  line-height: 1.6;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.footer-dark ul a {
-  color: inherit;
-  text-decoration: none;
-  opacity: 0.6;
-}
-
-.footer-dark ul a:hover {
-  opacity: 0.8;
-}
-
-.footer-dark .item.text {
-  margin-bottom: 36px;
-}
-
-.footer-dark .item.text p {
-  opacity: 0.6;
-  margin-bottom: 0;
-}
-
-.footer-dark .item.social {
-  text-align: center;
-}
-
-.footer-dark .item.social > a {
-  display: inline-block;
-  border-radius: 50%;
-  margin: 0 8px;
-  background-color: #f2f2f2;
-  opacity: 0.75;
-}
-
-.footer-dark .item.social > a:hover {
-  opacity: 0.9;
-  background-color: #ff6347;
-}
-
-.footer-dark .copyright {
-  text-align: center;
-  color: #f2f2f2;
-  padding-top: 24px;
-  font-size: 13px;
-  margin-bottom: 0;
+.card > img {
+  height: 300px;
+  width: 400px;
 }
 
 /*Responsividade*/
 @media (max-width: 991px) {
-  .container-cadastro-ong {
-    width: 319px;
-  }
-
-  header {
-    padding: 0 10px 0 10px;
-  }
-
-  .footer-dark .item.social {
-    text-align: center;
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  .footer-dark .item:not(.social) {
-    text-align: center;
-    padding-bottom: 20px;
-  }
-
-  .footer-dark .item.text {
-    margin-bottom: 0;
+  .card img {
+    width: 295px;
   }
 }
