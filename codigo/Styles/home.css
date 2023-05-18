@@ -13,7 +13,6 @@ header {
   margin: 0 0 20px 0;
 }
 .copyright,
-.perdido div h1,
 .navbar ul li a {
   color: #f2f2f2;
 }
@@ -50,7 +49,8 @@ header {
   height: 500px;
 }
 
-#animaisPerdidos {
+.animaisPerdidos,
+.perdido div h1 {
   color: #fff;
   text-align: center;
   margin: 50px;
@@ -64,29 +64,18 @@ header {
 .card {
   margin-bottom: 20px;
   padding: 20px 20px 0 20px;
-  width: 440px;
+  width: 360px;
 }
 
 .card img {
   height: 300px;
-  width: 400px;
+  width: 320px;
+}
+img.img-fluid.imagem-cards {
+  width: 100%;
 }
 
-/*Responsividade*/
-@media (max-width: 991px) {
-  .card img {
-    width: 295px;
-  }
-}
 /*carrossel*/
-
-.img-carrossel {
-  height: 300px;
-}
-
-.descrição {
-  font-weight: 100;
-}
 
 /*Footer*/
 
@@ -157,11 +146,18 @@ header {
 
 /*Responsividade*/
 @media (max-width: 991px) {
-  .container-cadastro-ong {
-    width: 319px;
-  }
   header {
     padding: 0 10px 0 10px;
+  }
+  .container-cadastro-ong {
+    width: 300px;
+    height: 250px;
+  }
+  .card {
+    width: 325px;
+  }
+  .card img {
+    width: 280px;
   }
 
   .footer-dark .item.social {
@@ -181,7 +177,7 @@ header {
   }
 
   .container-cadastro-ong {
-    height: 250px;
+    height: 255px;
   }
   .animal {
     height: 600px;
@@ -189,5 +185,8 @@ header {
 
   .card {
     width: 340px;
+  }
+  .card img {
+    width: 295px;
   }
 }
