@@ -36,3 +36,17 @@ div h3 {
   background-color: #5271ff;
   display: inline-block;
 }
+
+@media screen and (max-width: 1090px){
+  .info div{
+      display: inline-block;
+      width: 45%;
+  }
+}
+
+@media screen and (max-width : 885px) {
+  .info div{
+      display: block;
+      width: auto;
+  }
+}
