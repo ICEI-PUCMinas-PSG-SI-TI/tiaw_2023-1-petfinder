@@ -31,6 +31,8 @@ function login(e) {
   let senha = document.getElementById("senha").value;
   if (email === "admin@admin.com" && senha === "123456") {
     window.location.href = "Perfil.html";
+  } else {
+    alert("Login/senha incorretos!");
   }
 }
 

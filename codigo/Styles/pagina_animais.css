@@ -10,26 +10,18 @@ body {
 }*/
 /*navbar*/
 
-.navbar ul li a:hover,
-.navbar ul li .nav-link.active {
-  color: #ff6347;
-}
-
-#animaisPerdidos {
+.animaisPerdidos {
   color: #fff;
   text-align: center;
   margin: 0 auto;
-  font-size: 70px;
 }
 
-.card > img {
+.card.imagem-cards {
   height: 300px;
   width: 400px;
 }
+img.img-fluid.imagem-cards {
+  width: 100%;
+}
 
 /*Responsividade*/
-@media (max-width: 991px) {
-  .card img {
-    width: 295px;
-  }
-}
