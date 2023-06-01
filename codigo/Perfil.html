@@ -16,7 +16,7 @@
       src="https://kit.fontawesome.com/3c75720308.js"
       crossorigin="anonymous"
     ></script>
-    <title>Perfil do usuário</title>
+    <title>PetFinder - Perfil</title>
   </head>
   <body>
     <header>
@@ -37,9 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto text-center mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="Home.html"
-                >Home</a
-              >
+              <a class="nav-link" aria-current="page" href="Home.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Sobrenos.html">Sobre nós</a>
@@ -53,13 +51,16 @@
             <li class="nav-item">
               <a class="nav-link" href="Login.html">Login</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Login.html">Sair</a>
+            </li>
           </ul>
         </div>
       </nav>
     </header>
 
     <section>
-      <h1>Bem-vindo ao seu perfil!</h1>
+      <h1 id="Nome"></h1>
       <br />
       <div class="icone">
         <i class="fa-regular fa-user fa-6x"></i>
@@ -267,6 +268,19 @@
         </div>
       </footer>
     </div>
+    <script src="js/Conexao.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+      if (!usuarioCorrenteJSON) {
+        window.location.href = "Login.html";
+      }
+      function exbirUser() {
+        document.getElementById("Nome").textContent =
+          "Bem vindo, " + usuarioCorrente.nome;
+      }
+      // Associa ao evento de carga da página a função para verificar se o usuário está logado
+      window.addEventListener("load", exbirUser);
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

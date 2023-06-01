@@ -1,39 +1,63 @@
-(() => {
-  "use strict";
+const LOGIN_URL = "Login.html";
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll(".needs-validation");
+function loginUser(login, senha) {
+  // Verifica todos os itens do banco de dados de usuarios
+  // para localizar o usuário informado no formulario de login
+  console.log(db_usuarios);
+  console.log(db_usuarios.Login.length);
+  for (var i = 0; i < db_usuarios.Login.length; i++) {
+    var usuario = db_usuarios.Login[i];
 
-  // Loop over them and prevent submission
-  Array.from(forms).forEach((form) => {
-    form.addEventListener(
-      "submit",
-      (event) => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
+    // Se encontrou login, carrega usuário corrente e salva no Session Storage
+    console.log(usuario.idlogin);
+    if (login === usuario.Email && senha === usuario.Senha) {
+      usuarioCorrente.id = usuario.idlogin;
+      usuarioCorrente.login = usuario.Email;
+      usuarioCorrente.senha = usuario.Senha;
+      usuarioCorrente.nome = usuario.Nome;
+      usuarioCorrente.endereco = usuario.Endereco;
+      usuarioCorrente.telefone = usuario.Telefone;
 
-        form.classList.add("was-validated");
-      },
-      false
-    );
-  });
-})();
+      // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
+      sessionStorage.setItem(
+        "usuarioCorrente",
+        JSON.stringify(usuarioCorrente)
+      );
 
-//
+      // Retorna true para usuário encontrado
+      return true;
+    }
+  }
+
+  // Se chegou até aqui é porque não encontrou o usuário e retorna falso
+  return false;
+}
 
 let form = document.getElementById("formulario");
 
-function login(e) {
+function processaFormLogin(e) {
+  // Cancela a submissão do formulário para tratar sem fazer refresh da tela
   e.preventDefault();
-  let email = document.getElementById("email").value;
-  let senha = document.getElementById("senha").value;
-  if (email === "admin@admin.com" && senha === "123456") {
-    window.location.href = "Perfil.html";
+
+  // Obtem os dados de login e senha a partir do formulário de login
+  var username = document.getElementById("email").value;
+  var password = document.getElementById("senha").value;
+
+  // Valida login e se estiver ok, redireciona para tela inicial da aplicação
+  resultadoLogin = loginUser(username, password);
+
+  if (resultadoLogin) {
+    window.location.href = "perfil.html";
   } else {
-    alert("Login/senha incorretos!");
+    // Se login falhou, avisa ao usuário
+    alert("Usuário ou senha incorretos");
   }
 }
 
-form.addEventListener("submit", login);
+form.addEventListener("submit", processaFormLogin);
+
+function logOutUser() {
+  usuarioCorrente = {};
+  sessionStorage.setItem("usuarioCorrente", JSON.stringify(usuarioCorrente));
+  window.location = LOGIN_URL;
+}

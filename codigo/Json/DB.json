@@ -1,0 +1,47 @@
+{
+  "Login": [
+    {
+      "idlogin": 1,
+      "Nome": "Adimin",
+      "Email": "login@gmail.com",
+      "Senha": "123",
+      "Endereco": "Rua",
+      "Telefone": "123456789",
+      "Cidade": "BH",
+      "Estado": "MG",
+      "CEP": "30291232"
+    },
+    {
+      "idlogin": 2,
+      "Nome": "Teste",
+      "Email": "email@gmail.com",
+      "Senha": "123",
+      "Endereco": "Rua",
+      "Telefone": "123456789",
+      "Cidade": "BH",
+      "Estado": "MG",
+      "CEP": "25291232"
+    }
+  ],
+  "CadastroONG": [
+    {
+      "IdONG": 1,
+      "Nome": "Ong",
+      "Email": "Ong@gmail.com",
+      "Senha": "123",
+      "Endereço": "Casa",
+      "Telefone": "123456789"
+    }
+  ],
+  "Animal": [
+    {
+      "Id": 1,
+      "Nome": "Caramelo",
+      "Raça": "Vira-lata",
+      "Encontrado": "Não",
+      "Adoção": "Sim",
+      "Endereço": "Casa",
+      "Telefone": "123456789"
+    }
+  ]
+}
