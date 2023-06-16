@@ -39,7 +39,7 @@ function login(e) {
   let email = document.getElementById("email").value;
   let senha = document.getElementById("senha").value;
   for (let i = 0; i < Login.length; i++) {
-    if (email === Login[0].emailcerto && senha === Login[0].senhacerta) {
+    if (email === Login[i].emailcerto && senha === Login[i].senhacerta) {
       window.location.href = "Perfil.html";
     }
   }
