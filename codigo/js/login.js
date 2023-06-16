@@ -32,17 +32,20 @@ let Login = [
   }
 ]
 
-JSON.parse(localStorage.setItem('Login',JSON.stringify(Login)))
+JSON.parse(localStorage.setItem('Login', JSON.stringify(Login)))
 
 function login(e) {
   e.preventDefault();
   let email = document.getElementById("email").value;
   let senha = document.getElementById("senha").value;
-  if (email === Login[0].emailcerto && senha === Login[0].senhacerta) {
-    window.location.href = "Perfil.html";
-  } else {
-    alert("Login/senha incorretos!");
+  for (let i = 0; i < Login.length; i++) {
+    if (email === Login[0].emailcerto && senha === Login[0].senhacerta) {
+      window.location.href = "Perfil.html";
+    }
   }
+  // else {
+  //   alert("Login/senha incorretos!");
+  // }
 }
 
 form.addEventListener("submit", login);
