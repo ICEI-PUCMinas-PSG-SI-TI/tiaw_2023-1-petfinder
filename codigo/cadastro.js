@@ -1,10 +1,12 @@
 function ler() {
     let stringDados = localStorage.getItem('db');
-    let objdados = {};
+    let objdados = [];
 
     return objdados;
 
 }
+
+//let objdados = JSON.parse(localStorage.getItem("db"))
 
 function salvar(stringDados) {
 
@@ -14,8 +16,8 @@ function salvar(stringDados) {
 
 function incluir() {
     let objdados = ler();
-    let xnome = document.getElementById("Cnome").value;
-    let senha = document.getElementById("Csenha").value;
+    let xnome = document.getElementById("Cemail").value;
+    let xsenha = document.getElementById("Csenha").value;
     let xendereco = document.getElementById("Cendereco1").value;
     let xendereco2 = document.getElementById("Cendereco2").value;
     let xtelefone = document.getElementById("Ctelefone").value;
@@ -33,12 +35,20 @@ function incluir() {
         estado: xestado,
         cep: xcep
     }
-    objdados.Contatos.push(NovoContato);
+    objdados.push(NovoContato);
     salvar(objdados);
     imprime();
 
 
 }
+function imprime() {
+
+    let strhtml = ""
+    let objdados = ler();
 
 
-document.getElementById("botao").addEventListener('click', imprimedados);
+}
+document.getElementById("Botao").addEventListener('click', incluir);
+
+
+
