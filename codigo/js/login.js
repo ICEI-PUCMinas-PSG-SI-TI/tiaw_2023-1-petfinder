@@ -25,12 +25,23 @@
 
 let form = document.getElementById("formulario");
 
+let Login = [
+  {
+    emailcerto: 'login@gmail.com',
+    senhacerta: '123'
+  }
+]
+
+JSON.parse(localStorage.setItem('Login',JSON.stringify(Login)))
+
 function login(e) {
   e.preventDefault();
   let email = document.getElementById("email").value;
   let senha = document.getElementById("senha").value;
-  if (email === "admin@admin.com" && senha === "123456") {
+  if (email === Login[0].emailcerto && senha === Login[0].senhacerta) {
     window.location.href = "Perfil.html";
+  } else {
+    alert("Login/senha incorretos!");
   }
 }
 

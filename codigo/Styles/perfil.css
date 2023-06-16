@@ -8,14 +8,15 @@ h1 {
   color: white !important;
 }
 
-#icone {
+.icone {
   margin: 0 auto;
   text-align: center;
-  border-radius: 50px;
+  border-radius: 200px;
   border: 5px solid black;
   margin-top: 10px;
   padding: 40px;
-  width: 23%;
+  width: 200px;
+  height: 200px;
   background-color: rgba(31, 38, 135, 0.37);
   margin-bottom: 50px;
 }
@@ -24,16 +25,61 @@ div h3 {
   color: white;
 }
 
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .info div p {
   color: rgb(255, 255, 255);
 }
 
 .info div {
-  width: 47%;
+  width: 650px;
   border-radius: 5px;
   border: 2px solid;
-  margin: 15px;
+  margin: 10px;
   padding: 20px;
   background-color: #5271ff;
+
   display: inline-block;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 991px) {
+  .info div {
+    width: 370px;
+  }
+}
+
+@media (max-width: 767px) {
+  .info div {
+    width: 500px;
+  }
+
+  .icone {
+    width: 230px;
+    height: 230px;
+    padding: 60px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .info div {
+    display: inline-block;
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 885px) {
+  .info div {
+    display: block;
+    width: auto;
+  }
+
+  #icone {
+    width: 200px;
+  }
 }

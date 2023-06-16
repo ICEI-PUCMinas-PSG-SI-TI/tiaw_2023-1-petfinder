@@ -16,7 +16,7 @@ function salvar(stringDados) {
 
 function incluir() {
     let objdados = ler();
-    let xnome = document.getElementById("Cemail").value;
+    let xemail = document.getElementById("Cemail").value;
     let xsenha = document.getElementById("Csenha").value;
     let xendereco = document.getElementById("Cendereco1").value;
     let xendereco2 = document.getElementById("Cendereco2").value;
@@ -26,7 +26,7 @@ function incluir() {
     let xcep = document.getElementById("Ccep").value;
 
     let NovoContato = {
-        nome: xnome,
+        nome: xemail,
         senha: xsenha,
         endereco: xendereco,
         endereco2: xendereco2,

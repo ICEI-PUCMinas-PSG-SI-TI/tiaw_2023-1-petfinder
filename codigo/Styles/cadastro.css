@@ -30,3 +30,13 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 991px) {
+  .cadastro-container {
+    width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .cadastro-container {
+    width: 95%;
+  }
+}
