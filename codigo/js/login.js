@@ -12,11 +12,14 @@ function loginUser(login, senha) {
     console.log(usuario.idlogin);
     if (login === usuario.Email && senha === usuario.Senha) {
       usuarioCorrente.id = usuario.idlogin;
-      usuarioCorrente.login = usuario.Email;
+      usuarioCorrente.email = usuario.Email;
       usuarioCorrente.senha = usuario.Senha;
       usuarioCorrente.nome = usuario.Nome;
       usuarioCorrente.endereco = usuario.Endereco;
       usuarioCorrente.telefone = usuario.Telefone;
+      usuarioCorrente.cidade = usuario.Cidade;
+      usuarioCorrente.estado = usuario.Estado;
+      usuarioCorrente.cep = usuario.CEP;
 
       // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
       sessionStorage.setItem(
