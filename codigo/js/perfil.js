@@ -53,11 +53,13 @@ function exbirUser() {
 
         </div>
       </div>
-      <input class="btn btn-success" type="submit" id="editar" name="editar" value="Editar">
+      <input class="btn btn-success" type="submit" id="editar" value="Editar">
     </form>
     `;
 
   Dados.innerHTML += html;
+  let botao = document.getElementById("editar");
+  botao.addEventListener("click", Editar);
 }
 function Novosdados(
   nome,
@@ -82,6 +84,7 @@ function Novosdados(
     CEP: cep,
   });
   sessionStorage.setItem("usuarioCorrente", JSON.stringify(dadosedit));
+  console.log(dadosedit);
 }
 
 function Editar() {
@@ -106,6 +109,3 @@ function Editar() {
 }
 // Associa ao evento de carga da página a função para verificar se o usuário está logado
 window.addEventListener("load", exbirUser);
-
-let botao = document.getElementById("editar");
-botao.addEventListener("click", Editar);
