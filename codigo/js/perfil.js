@@ -71,7 +71,7 @@ function Novosdados(
   cep
 ) {
   let dadosedit = JSON.parse(sessionStorage.getItem("usuarioCorrente"));
-  let dbUser = JSON.parse(localStorage.getItem("db_user"));
+  // let dbUser = JSON.parse(localStorage.getItem("db_user"));
   // Atualiza os valores no objeto usuarioCorrente
   dadosedit.nome = nome;
   dadosedit.email = email;
@@ -84,8 +84,8 @@ function Novosdados(
 
   sessionStorage.setItem("usuarioCorrente", JSON.stringify(dadosedit));
 
-  usuarios[idlogin] = dadosedit;
-  localStorage.setItem("db_user", JSON.stringify(dbUser));
+  // dbUser.Login[dadosedit] = dadosedit;
+  // localStorage.setItem("db_user", JSON.stringify(dbUser));
 }
 function Editar() {
   let nomed = document.getElementById("txt_nome").value;
