@@ -36,11 +36,74 @@
   "Animal": [
     {
       "Id": 1,
-      "Nome": "Caramelo",
-      "Raça": "Vira-lata",
+      "Nome": "Flash",
+      "Imagem": "/codigo/img/04-09_gato_SITE.webp",
+      "Raca": "Vira-lata",
+      "Cor": "Amarelo",
+      "Perdido": "Encontrado na Rua Frederico Moura",
       "Encontrado": "Não",
-      "Adoção": "Sim",
-      "Endereço": "Casa",
+      "Tamanho": "Sim",
+      "Descricao": "arroz",
+      "Telefone": "(12)3456789"
+    },
+    {
+      "Id": 2,
+      "Nome": "Ringo",
+      "Imagem": "/codigo/img/black-german-shepherd-2978323_960_720.jpg",
+      "Raca": "Vira-lata",
+      "Cor": "Preto",
+      "Perdido": "Encontrado na Rua Márcia Marginal",
+      "Encontrado": "Não",
+      "Tamanho": "Sim",
+      "Descricao": "Descreva aqui",
+      "Telefone": "123456789"
+    },
+    {
+      "Id": 3,
+      "Nome": "Smoke",
+      "Imagem": "/codigo/img/Cachorro_caramelo.jpg",
+      "Raca": "Vira-lata",
+      "Cor": "Amarelo",
+      "Perdido": "Encontrado na Rua São João",
+      "Encontrado": "Não",
+      "Tamanho": "Sim",
+      "Descricao": "Descreva aqui",
+      "Telefone": "123456789"
+    },
+    {
+      "Id": 4,
+      "Nome": "Jack",
+      "Imagem": "/codigo/img/gato-e-carnivoro2.jpg",
+      "Raca": "Vira-lata",
+      "Cor": "Siamês",
+      "Perdido": "Encontrado na Rua Barão de Vitória ",
+      "Encontrado": "Não",
+      "Tamanho": "Sim",
+      "Descricao": "Descreva aqui",
+      "Telefone": "123456789"
+    },
+    {
+      "Id": 5,
+      "Nome": "Molotov",
+      "Imagem": "/codigo/img/golden-retriever-4803454_1280.jpg",
+      "Raca": "Golden",
+      "Cor": "Amarelo",
+      "Perdido": "Encontrado na Rua Justino",
+      "Encontrado": "Sim",
+      "Tamanho": "Sim",
+      "Descricao": "Descreva aqui",
+      "Telefone": "123456789"
+    },
+    {
+      "Id": 6,
+      "Nome": "Antony",
+      "Imagem": "/codigo/img/vira-lata-caramelo-pet.jpg",
+      "Raca": "Vira-lata",
+      "Cor": "Amarelo",
+      "Perdido": "Encontrado na Rua Pereira Estéfano",
+      "Encontrado": "Não",
+      "Tamanho": "Sim",
+      "Descricao": "Descreva aqui",
       "Telefone": "123456789"
     }
   ]

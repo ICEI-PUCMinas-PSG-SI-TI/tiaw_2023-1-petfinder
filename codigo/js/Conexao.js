@@ -1,5 +1,5 @@
 function LerDB() {
-  let requisicao = "Json/DB.json";
+  let requisicao = "../Json/DB.json";
 
   return fetch(requisicao)
     .then((res) => res.json())
