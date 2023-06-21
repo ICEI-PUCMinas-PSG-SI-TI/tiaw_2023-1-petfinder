@@ -21,7 +21,7 @@ function BancoDB() {
   var lido_usuarios = localStorage.getItem("db_user");
   console.log(JSON.parse(lido_usuarios));
   if (!lido_usuarios) {
-    // Se NÃO há dados no localStorage
+    // Chama a função LerDB para obter os dados do servidor JSON
     LerDB();
     // Informa sobre localStorage vazio e que será feita uma nova requisição
     alert(
@@ -34,8 +34,6 @@ function BancoDB() {
     db_usuarios = JSON.parse(lido_usuarios);
   }
 }
-
-// Chama a função LerDB para obter os dados do servidor JSON
 
 // Chama a função BancoDB para carregar os dados do localStorage
 BancoDB();

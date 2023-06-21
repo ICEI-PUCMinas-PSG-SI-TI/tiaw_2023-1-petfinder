@@ -1,48 +1,49 @@
 function exbirUser() {
-  let Dados = document.getElementById("DadosUser");
+  let Dados = document.getElementById("ModalDadosuser");
+
   var html = `<form action="">
       <div class="mb-3 d-flex flex-row justify-content-around">
         <p class="CampoDado">Nome:</p>
         <div class="formInput">
-        <input type="text" id="txt_nome" value="${usuarioCorrente.nome}"disabled>
+        <input type="text" id="txt_nome" value="${usuarioCorrente.nome}">
         </div>
       </div>
       <div class="mb-3 d-flex flex-row justify-content-around">
         <p class="CampoDado">E-mail:</p>
         <div class="formInput">
-        <input type="text" id="txt_email" value="${usuarioCorrente.email}"disabled>
+        <input type="text" id="txt_email" value="${usuarioCorrente.email}">
         </div>
       </div>
       <div class="mb-3 d-flex flex-row justify-content-around">
         <p class="CampoDado">Senha:</p>
         <div class="formInput">
-        <input type="text" id="txt_senha" value="${usuarioCorrente.senha}"disabled>
+        <input type="text" id="txt_senha" value="${usuarioCorrente.senha}">
         </div>
       </div>
       <div class="mb-3 d-flex flex-row justify-content-around">
         <p class="CampoDado">Endereço:</p>
         <div class="formInput">
-        <input type="text" id="txt_endereco" value="${usuarioCorrente.endereco}"disabled>
+        <input type="text" id="txt_endereco" value="${usuarioCorrente.endereco}">
         </div>
       </div>
       <div class="mb-3 d-flex flex-row justify-content-around">
         <p class="CampoDado">Telefone:</p>
         <div class="formInput">
-        <input type="text" id="txt_telefone" value="${usuarioCorrente.telefone}"disabled>
+        <input type="text" id="txt_telefone" value="${usuarioCorrente.telefone}">
 
         </div>
       </div>
       <div class="mb-3 d-flex flex-row justify-content-around">
         <p class="CampoDado">Cidade:</p>
         <div class="formInput">
-        <input type="text" id="txt_cidade" value="${usuarioCorrente.cidade}"disabled>
+        <input type="text" id="txt_cidade" value="${usuarioCorrente.cidade}">
 
         </div>
       </div>
       <div class="mb-3 d-flex flex-row justify-content-around">
         <p class="CampoDado">Estado:</p>
         <div class="formInput">
-        <input type="text" id="txt_estado" value="${usuarioCorrente.estado}"disabled>
+        <input type="text" id="txt_estado" value="${usuarioCorrente.estado}">
 
         </div>
       </div>
@@ -53,13 +54,11 @@ function exbirUser() {
 
         </div>
       </div>
-      <input class="btn btn-success" type="submit" id="editar" value="Editar">
+      
     </form>
     `;
 
   Dados.innerHTML += html;
-  let botao = document.getElementById("editar");
-  botao.addEventListener("click", Editar);
 }
 function Novosdados(
   nome,
@@ -72,21 +71,22 @@ function Novosdados(
   cep
 ) {
   let dadosedit = JSON.parse(sessionStorage.getItem("usuarioCorrente"));
-  // Cria um objeto de usuario para editar usuario
-  dadosedit.push({
-    Nome: nome,
-    Email: email,
-    Senha: senha,
-    Endereco: endereco,
-    Telefone: telefone,
-    Cidade: cidade,
-    Estado: estado,
-    CEP: cep,
-  });
-  sessionStorage.setItem("usuarioCorrente", JSON.stringify(dadosedit));
-  console.log(dadosedit);
-}
+  let dbUser = JSON.parse(localStorage.getItem("db_user"));
+  // Atualiza os valores no objeto usuarioCorrente
+  dadosedit.nome = nome;
+  dadosedit.email = email;
+  dadosedit.senha = senha;
+  dadosedit.endereco = endereco;
+  dadosedit.telefone = telefone;
+  dadosedit.cidade = cidade;
+  dadosedit.estado = estado;
+  dadosedit.cep = cep;
 
+  sessionStorage.setItem("usuarioCorrente", JSON.stringify(dadosedit));
+
+  usuarios[idlogin] = dadosedit;
+  localStorage.setItem("db_user", JSON.stringify(dbUser));
+}
 function Editar() {
   let nomed = document.getElementById("txt_nome").value;
   let emaild = document.getElementById("txt_email").value;
@@ -96,6 +96,7 @@ function Editar() {
   let telefoned = document.getElementById("txt_telefone").value;
   let estadod = document.getElementById("txt_estado").value;
   let cepd = document.getElementById("txt_CEP").value;
+  // console.log(JSON.parse(dadosedit));
   Novosdados(
     nomed,
     emaild,
@@ -107,5 +108,8 @@ function Editar() {
     cepd
   );
 }
+let botao = document.getElementById("editar");
+botao.addEventListener("click", Editar);
+
 // Associa ao evento de carga da página a função para verificar se o usuário está logado
 window.addEventListener("load", exbirUser);

@@ -68,7 +68,7 @@
       </div>
     </section>
 
-    <!-- <div class="info">
+    <div class="info">
       <div>
         <h3>Minhas informações pessoais</h3>
         <p>
@@ -79,6 +79,9 @@
             type="button"
             class="btn btn-outline-warning"
             value="Gerenciar meus dados"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            data-bs-whatever="@getbootstrap"
         /></a>
       </div>
       <div>
@@ -139,10 +142,50 @@
             value="Ver ONGs"
         /></a>
       </div>
-    </div> -->
+    </div>
     <section>
       <div class="container">
-        <div class="DadosPerfil" id="DadosUser"></div>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Editar</h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body DadosPerfil">
+                <div class="" id="ModalDadosuser"></div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="submit"
+                  id="editar"
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                >
+                  Editar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -275,7 +318,7 @@
       </footer>
     </div>
     <script src="js/Conexao.js"></script>
-    <script src="js/login.js"></script>
+
     <script src="js/perfil.js"></script>
     <script>
       if (!usuarioCorrenteJSON || !usuarioCorrente) {

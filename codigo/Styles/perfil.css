@@ -24,6 +24,9 @@ h1 {
 div h3 {
   color: white;
 }
+.modal-header h1 {
+  color: black !important;
+}
 .info {
   display: flex;
   flex-wrap: wrap;
@@ -47,15 +50,12 @@ div h3 {
 /*TESTANDO*/
 .DadosPerfil {
   background-color: #5271ff;
-  width: 300px;
-  height: 650px;
-  display: flex;
+
   padding: 20px 20px 0 20px;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 .CampoDado {
-  margin-top: 15px;
+  color: rgb(255, 255, 255);
+  margin-top: 5px;
   margin-right: 10px;
   font-size: 15px;
 }
@@ -68,7 +68,6 @@ div h3 {
   border: 0;
   border-bottom: 2px #fff solid;
   width: 100%;
-
   font-size: 18px;
   color: #fff;
 }
@@ -76,7 +75,10 @@ div h3 {
 .formInput input:focus,
 .formInput input:valid {
   outline: 0;
-  border-bottom-color: lightblue;
+}
+
+.formInput input:focus {
+  border-bottom-color: rgb(0, 15, 20);
 }
 
 /*FIM TESTE*/
