@@ -1,5 +1,5 @@
 function LerDB() {
-  let requisicao = "../Json/DB.json";
+  let requisicao = "Json/DB.json";
 
   return fetch(requisicao)
     .then((res) => res.json())
@@ -23,10 +23,6 @@ function BancoDB() {
   if (!lido_usuarios) {
     // Chama a função LerDB para obter os dados do servidor JSON
     LerDB();
-    // Informa sobre localStorage vazio e que será feita uma nova requisição
-    alert(
-      "Dados de usuários não encontrados no localStorage. Fazendo nova requisição."
-    );
   } else {
     // Se há dados no localStorage
 

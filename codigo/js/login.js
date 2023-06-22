@@ -5,35 +5,42 @@ function loginUser(login, senha) {
   // para localizar o usuário informado no formulario de login
   console.log(db_usuarios);
   console.log(db_usuarios.Login.length);
-  for (var i = 0; i < db_usuarios.Login.length; i++) {
-    var usuario = db_usuarios.Login[i];
+  if (
+    usuarioCorrenteJSON &&
+    usuarioCorrente.email === login &&
+    usuarioCorrente.senha === senha
+  ) {
+    return true;
+  } else {
+    for (var i = 0; i < db_usuarios.Login.length; i++) {
+      var usuario = db_usuarios.Login[i];
 
-    // Se encontrou login, carrega usuário corrente e salva no Session Storage
-    console.log(usuario.idlogin);
-    if (login === usuario.Email && senha === usuario.Senha) {
-      usuarioCorrente.id = usuario.idlogin;
-      usuarioCorrente.email = usuario.Email;
-      usuarioCorrente.senha = usuario.Senha;
-      usuarioCorrente.nome = usuario.Nome;
-      usuarioCorrente.endereco = usuario.Endereco;
-      usuarioCorrente.telefone = usuario.Telefone;
-      usuarioCorrente.cidade = usuario.Cidade;
-      usuarioCorrente.estado = usuario.Estado;
-      usuarioCorrente.cep = usuario.CEP;
+      // Se encontrou login, carrega usuário corrente e salva no Session Storage
+      console.log(usuario.idlogin);
+      if (login === usuario.Email && senha === usuario.Senha) {
+        usuarioCorrente.id = usuario.idlogin;
+        usuarioCorrente.email = usuario.Email;
+        usuarioCorrente.senha = usuario.Senha;
+        usuarioCorrente.nome = usuario.Nome;
+        usuarioCorrente.endereco = usuario.Endereco;
+        usuarioCorrente.telefone = usuario.Telefone;
+        usuarioCorrente.cidade = usuario.Cidade;
+        usuarioCorrente.estado = usuario.Estado;
+        usuarioCorrente.cep = usuario.CEP;
 
-      // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
-      sessionStorage.setItem(
-        "usuarioCorrente",
-        JSON.stringify(usuarioCorrente)
-      );
+        // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
+        sessionStorage.setItem(
+          "usuarioCorrente",
+          JSON.stringify(usuarioCorrente)
+        );
 
-      // Retorna true para usuário encontrado
-      return true;
+        // Retorna true para usuário encontrado
+        return true;
+      }
     }
+    // Se chegou até aqui é porque não encontrou o usuário e retorna falso
+    return false;
   }
-
-  // Se chegou até aqui é porque não encontrou o usuário e retorna falso
-  return false;
 }
 
 let form = document.getElementById("formulario");
@@ -58,9 +65,3 @@ function processaFormLogin(e) {
 }
 
 form.addEventListener("submit", processaFormLogin);
-
-function logOutUser() {
-  usuarioCorrente = {};
-  sessionStorage.setItem("usuarioCorrente", JSON.stringify(usuarioCorrente));
-  window.location = LOGIN_URL;
-}

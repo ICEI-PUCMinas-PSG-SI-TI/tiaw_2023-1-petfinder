@@ -40,10 +40,10 @@
       "Imagem": "/codigo/img/04-09_gato_SITE.webp",
       "Raca": "Vira-lata",
       "Cor": "Amarelo",
-      "Perdido": "Encontrado na Rua Frederico Moura",
+      "Perdido": "na Rua Frederico Moura",
       "Encontrado": "Não",
-      "Tamanho": "Sim",
-      "Descricao": "arroz",
+      "Tamanho": "Pequeno",
+      "Descricao": "Descreva aqui",
       "Telefone": "(12)3456789"
     },
     {
@@ -52,11 +52,11 @@
       "Imagem": "/codigo/img/black-german-shepherd-2978323_960_720.jpg",
       "Raca": "Vira-lata",
       "Cor": "Preto",
-      "Perdido": "Encontrado na Rua Márcia Marginal",
+      "Perdido": "na Rua Márcia Marginal",
       "Encontrado": "Não",
-      "Tamanho": "Sim",
+      "Tamanho": "Grande",
       "Descricao": "Descreva aqui",
-      "Telefone": "123456789"
+      "Telefone": "6543456754"
     },
     {
       "Id": 3,
@@ -64,11 +64,11 @@
       "Imagem": "/codigo/img/Cachorro_caramelo.jpg",
       "Raca": "Vira-lata",
       "Cor": "Amarelo",
-      "Perdido": "Encontrado na Rua São João",
+      "Perdido": "na Rua São João",
       "Encontrado": "Não",
-      "Tamanho": "Sim",
+      "Tamanho": "médio",
       "Descricao": "Descreva aqui",
-      "Telefone": "123456789"
+      "Telefone": "6423414236"
     },
     {
       "Id": 4,
@@ -76,11 +76,11 @@
       "Imagem": "/codigo/img/gato-e-carnivoro2.jpg",
       "Raca": "Vira-lata",
       "Cor": "Siamês",
-      "Perdido": "Encontrado na Rua Barão de Vitória ",
+      "Perdido": "na Rua Barão de Vitória ",
       "Encontrado": "Não",
-      "Tamanho": "Sim",
+      "Tamanho": "Pequeno",
       "Descricao": "Descreva aqui",
-      "Telefone": "123456789"
+      "Telefone": "46456457"
     },
     {
       "Id": 5,
@@ -88,11 +88,11 @@
       "Imagem": "/codigo/img/golden-retriever-4803454_1280.jpg",
       "Raca": "Golden",
       "Cor": "Amarelo",
-      "Perdido": "Encontrado na Rua Justino",
+      "Perdido": "na Rua Justino",
       "Encontrado": "Sim",
-      "Tamanho": "Sim",
+      "Tamanho": "Grande",
       "Descricao": "Descreva aqui",
-      "Telefone": "123456789"
+      "Telefone": "234234234"
     },
     {
       "Id": 6,
@@ -100,11 +100,47 @@
       "Imagem": "/codigo/img/vira-lata-caramelo-pet.jpg",
       "Raca": "Vira-lata",
       "Cor": "Amarelo",
-      "Perdido": "Encontrado na Rua Pereira Estéfano",
+      "Perdido": "na Rua Pereira Estéfano",
       "Encontrado": "Não",
-      "Tamanho": "Sim",
+      "Tamanho": "Grande",
       "Descricao": "Descreva aqui",
-      "Telefone": "123456789"
+      "Telefone": "5464645645"
+    },
+    {
+      "Id": 7,
+      "Nome": "Lótus",
+      "Imagem": "/codigo/img/wer24.jpg",
+      "Raca": "Vira-lata",
+      "Cor": "Preto",
+      "Perdido": "na Rua 28 de outubro",
+      "Encontrado": "Não",
+      "Tamanho": "Pequeno",
+      "Descricao": "Descreva aqui",
+      "Telefone": "2356789087654"
+    },
+    {
+      "Id": 8,
+      "Nome": "Ana",
+      "Imagem": "/codigo/img/nomes-para-cachorro.jpg",
+      "Raca": "Vira-lata",
+      "Cor": "Branco e marrom",
+      "Perdido": "na Rua Gustavo Antunes",
+      "Encontrado": "Não",
+      "Tamanho": "Pequeno",
+      "Descricao": "Descreva aqui",
+      "Telefone": "145675476"
+    },
+    {
+      "Id": 9,
+      "Nome": "Thalles",
+      "Imagem": "/codigo/img/cachorro-salivando-2.jpg",
+      "Raca": "Vira-lata",
+      "Cor": "Preto e branco",
+      "Perdido": "na Rua Antônio da Silva",
+      "Encontrado": "Não",
+      "Tamanho": "Grande",
+      "Descricao": "Descreva aqui",
+      "Telefone": "62143423424"
     }
   ]
 }

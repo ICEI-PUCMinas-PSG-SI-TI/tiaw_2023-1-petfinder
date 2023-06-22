@@ -1,6 +1,7 @@
 function exbirUser() {
   let Dados = document.getElementById("ModalDadosuser");
-
+  let nome = document.getElementById("Nome");
+  let receber = `<h1>Bem vindo, ${usuarioCorrente.nome}</h1>`;
   var html = `<form action="">
       <div class="mb-3 d-flex flex-row justify-content-around">
         <p class="CampoDado">Nome:</p>
@@ -59,6 +60,7 @@ function exbirUser() {
     `;
 
   Dados.innerHTML += html;
+  nome.innerHTML = receber;
 }
 function Novosdados(
   nome,
@@ -70,9 +72,27 @@ function Novosdados(
   estado,
   cep
 ) {
+  //converte o usuariocorrente
   let dadosedit = JSON.parse(sessionStorage.getItem("usuarioCorrente"));
-  // let dbUser = JSON.parse(localStorage.getItem("db_user"));
-  // Atualiza os valores no objeto usuarioCorrente
+  //procura no localstorage o elemento com o mesmo id do sessionstorage
+  var indiceUsuario = db_usuarios.Login.findIndex(function (user) {
+    return user.idlogin === dadosedit.id;
+  });
+  //depois que encontra os dados iguais passa as informacoes que o usuario editou do sessionstorage e atribui ao localstorage
+  db_usuarios.Login[indiceUsuario] = {
+    idlogin: usuarioCorrente.id,
+    nome,
+    email,
+    senha,
+    endereco,
+    telefone,
+    cidade,
+    estado,
+    cep,
+  };
+  //seta as novas informacoes no localstorage
+  localStorage.setItem("db_user", JSON.stringify(db_usuarios));
+  //salva as infos atualizadas no sessionstorage
   dadosedit.nome = nome;
   dadosedit.email = email;
   dadosedit.senha = senha;
@@ -88,6 +108,7 @@ function Novosdados(
   // localStorage.setItem("db_user", JSON.stringify(dbUser));
 }
 function Editar() {
+  //pega os valores dos ids
   let nomed = document.getElementById("txt_nome").value;
   let emaild = document.getElementById("txt_email").value;
   let senhad = document.getElementById("txt_senha").value;
@@ -97,6 +118,7 @@ function Editar() {
   let estadod = document.getElementById("txt_estado").value;
   let cepd = document.getElementById("txt_CEP").value;
   // console.log(JSON.parse(dadosedit));
+  //passa essas infos para a funcao Novosdados
   Novosdados(
     nomed,
     emaild,
@@ -112,4 +134,5 @@ let botao = document.getElementById("editar");
 botao.addEventListener("click", Editar);
 
 // Associa ao evento de carga da página a função para verificar se o usuário está logado
+
 window.addEventListener("load", exbirUser);
