@@ -1,6 +1,7 @@
 function DadosAnimais() {
   // const urlParams = new URLSearchParams(window.location.search);
-  let dados = "http://localhost:3000/Animal";
+  let dados =
+    "https://my-json-server.typicode.com/MiguelInacio23/testebd/Animal";
 
   fetch(dados)
     .then((res) => res.json())
