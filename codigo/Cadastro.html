@@ -56,47 +56,34 @@
     <section class="cadastro-container mt-5">
       <h1 class="text-center p-2">Cadastro</h1>
       <div class="espacamento-form">
-        <form class="row g-3 needs-validation" novalidate>
+        <form class="row g-3 needs-validation" id="cadastro" novalidate>
           <div class="col-6 col-lg-4">
-            <label for="validationCustom01" class="form-label">E-mail:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom01"
-              required
-            />
+            <label for="validationCustom01" class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="txt_nome" required />
             <div class="valid-feedback">Looks good!</div>
           </div>
           <div class="col-6 col-lg-4">
-            <label for="validationCustom02" class="form-label">Senha:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom02"
-              required
-            />
+            <label for="validationCustom02" class="form-label">E-mail:</label>
+            <input type="text" class="form-control" id="txt_email" required />
             <div class="valid-feedback">Looks good!</div>
           </div>
 
           <div class="col-6 col-lg-4">
-            <label for="validationCustom03" class="form-label"
-              >Endereço 1:</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom03"
-              required
-            />
+            <label for="validationCustom03" class="form-label">Senha:</label>
+            <input type="text" class="form-control" id="txt_senha" required />
           </div>
           <div class="col-6 col-lg-4">
             <label for="validationCustom03" class="form-label"
-              >Endereço 2:</label
+              >Confirmar Senha:</label
             >
+            <input type="text" class="form-control" id="txt_senha2" required />
+          </div>
+          <div class="col-6 col-lg-4">
+            <label for="validationCustom03" class="form-label">Endereço:</label>
             <input
               type="text"
               class="form-control"
-              id="validationCustom03"
+              id="txt_endereco"
               required
             />
           </div>
@@ -105,36 +92,21 @@
             <input
               type="text"
               class="form-control"
-              id="validationCustom03"
+              id="txt_telefone"
               required
             />
+          </div>
+          <div class="col-6 col-lg-5">
+            <label for="validationCustom03" class="form-label">Cidade:</label>
+            <input type="text" class="form-control" id="txt_cidade" required />
           </div>
           <div class="col-6 col-lg-4">
-            <label for="validationCustom03" class="form-label">Cidade:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom03"
-              required
-            />
-          </div>
-          <div class="col-6 col-lg-6">
             <label for="validationCustom03" class="form-label">Estado:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom03"
-              required
-            />
+            <input type="text" class="form-control" id="txt_estado" required />
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-3">
             <label for="validationCustom03" class="form-label">CEP:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom03"
-              required
-            />
+            <input type="text" class="form-control" id="txt_CEP" required />
           </div>
 
           <div class="botoes">
@@ -144,11 +116,11 @@
                 class="btn btn-outline-warning"
                 value="Voltar"
             /></a>
-            <a href="/codigo/Home.html"
+            <a
               ><input
-                type="button"
+                type="submit"
                 class="btn btn-outline-warning"
-                onclick="cadastrar()"
+                id="btn_salvar"
                 value="Cadastrar"
             /></a>
           </div>
@@ -291,10 +263,6 @@
       crossorigin="anonymous"
     ></script>
   </body>
-
-  <script>
-    function cadastrar() {
-      alert("Cadastro realizado com Sucesso!");
-    }
-  </script>
+  <script src="js/Conexao.js"></script>
+  <script src="js/cadastro.js"></script>
 </html>
