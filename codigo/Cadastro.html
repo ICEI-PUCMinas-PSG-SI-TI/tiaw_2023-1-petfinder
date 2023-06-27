@@ -15,6 +15,7 @@
 
     <title>Petfinder - Cadastro</title>
   </head>
+
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
@@ -57,84 +58,52 @@
       <h1 class="text-center p-2">Cadastro</h1>
       <div class="espacamento-form">
         <form class="row g-3 needs-validation" novalidate>
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <label for="validationCustom01" class="form-label">E-mail:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom01"
-              required
-            />
+            <input type="text" class="form-control" id="Cemail" required />
             <div class="valid-feedback">Looks good!</div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <label for="validationCustom02" class="form-label">Senha:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom02"
-              required
-            />
+            <input type="text" class="form-control" id="Csenha" required />
             <div class="valid-feedback">Looks good!</div>
           </div>
 
-          <div class="col-lg-4">
+          <div class="col-lg-5">
             <label for="validationCustom03" class="form-label"
               >Endereço 1:</label
             >
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom03"
-              required
-            />
+            <input type="text" class="form-control" id="Cendereco1" required />
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-1">
+            <label for="validationCustom04" class="form-label">N°:</label>
+            <input type="text" class="form-control" id="CnumeroCasa1" required />
+          </div>
+          <div class="col-lg-5">
             <label for="validationCustom03" class="form-label"
               >Endereço 2:</label
             >
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom03"
-              required
-            />
+            <input type="text" class="form-control" id="Cendereco2" required />
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-1">
+            <label for="validationCustom04" class="form-label">N°:</label>
+            <input type="text" class="form-control" id="CnumeroCasa2" required />
+          </div>
+          <div class="col-lg-6">
             <label for="validationCustom03" class="form-label">Telefone:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom03"
-              required
-            />
+            <input type="text" class="form-control" id="Ctelefone" required />
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <label for="validationCustom03" class="form-label">Cidade:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom03"
-              required
-            />
+            <input type="text" class="form-control" id="Ccidade" required />
           </div>
           <div class="col-lg-6">
             <label for="validationCustom03" class="form-label">Estado:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom03"
-              required
-            />
+            <input type="text" class="form-control" id="Cestado" required />
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-4">
             <label for="validationCustom03" class="form-label">CEP:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom03"
-              required
-            />
+            <input type="text" class="form-control" id="Ccep" required />
           </div>
 
           <div class="botoes">
@@ -144,12 +113,12 @@
                 class="btn btn-outline-warning"
                 value="Voltar"
             /></a>
-            <a href="/codigo/Home.html"
+            <a href="./Login.html"
               ><input
                 type="button"
                 class="btn btn-outline-warning"
-                onclick="cadastrar()"
                 value="Cadastrar"
+                id="Botao"
             /></a>
           </div>
         </form>
@@ -290,6 +259,8 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <script src="cadastro.js"></script>
   </body>
 
   <script>
