@@ -73,5 +73,13 @@ function salvaLogin(e) {
   // Oculta a div modal do login
   //document.getElementById ('loginModal').style.display = 'none';
 }
+
+function Resposta(dados) {}
+
+function PesquisaCEP(cep) {
+  fetch("https://viacep.com.br/ws/" + cep + "/json/")
+    .then((res) => res.JSON)
+    .then((res) => Resposta(res));
+}
 let form2 = document.getElementById("cadastro");
 form2.addEventListener("submit", salvaLogin);
