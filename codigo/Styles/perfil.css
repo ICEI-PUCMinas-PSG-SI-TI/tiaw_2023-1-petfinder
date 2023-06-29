@@ -24,9 +24,11 @@ h1 {
 div h3 {
   color: white;
 }
+
 .modal-header h1 {
   color: black !important;
 }
+
 .info {
   display: flex;
   flex-wrap: wrap;
@@ -36,6 +38,7 @@ div h3 {
 .info div p {
   color: rgb(255, 255, 255);
 }
+
 .info div {
   width: 650px;
   border-radius: 5px;
@@ -43,6 +46,8 @@ div h3 {
   margin: 10px;
   padding: 20px;
   background-color: #5271ff;
+
+  display: inline-block;
   display: flex;
   flex-direction: column;
 }
@@ -53,12 +58,14 @@ div h3 {
 
   padding: 20px 20px 0 20px;
 }
+
 .CampoDado {
   color: rgb(255, 255, 255);
   margin-top: 5px;
   margin-right: 10px;
   font-size: 15px;
 }
+
 .formInput {
   width: 55%;
 }
@@ -88,10 +95,12 @@ div h3 {
     width: 370px;
   }
 }
+
 @media (max-width: 767px) {
   .info div {
     width: 500px;
   }
+
   .icone {
     width: 230px;
     height: 230px;
@@ -111,6 +120,7 @@ div h3 {
     display: block;
     width: auto;
   }
+
   #icone {
     width: 200px;
   }

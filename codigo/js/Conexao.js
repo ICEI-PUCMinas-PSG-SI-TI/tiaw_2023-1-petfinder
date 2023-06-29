@@ -1,4 +1,5 @@
 function LerDB() {
+
   let requisicao = "Json/DB.json";
 
   return fetch(requisicao)
@@ -6,6 +7,7 @@ function LerDB() {
     .then((informacoes) => {
       localStorage.setItem("db_user", JSON.stringify(informacoes));
     });
+
 }
 
 var db_usuarios = {};
@@ -30,6 +32,7 @@ function BancoDB() {
     db_usuarios = JSON.parse(lido_usuarios);
   }
 }
+
 
 // Chama a função BancoDB para carregar os dados do localStorage
 BancoDB();
