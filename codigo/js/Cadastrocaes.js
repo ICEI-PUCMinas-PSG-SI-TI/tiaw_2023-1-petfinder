@@ -18,6 +18,7 @@ function generateUUID() {
 }
 
 
+
 function addUser(nome, raca, endereco, telefone, descricao) {
     // Cria um objeto de usuario para o novo usuario
     let newId = generateUUID();
@@ -55,6 +56,7 @@ function salvaLogin(e) {
     // Oculta a div modal do login
     //document.getElementById ('loginModal').style.display = 'none';
 }
+
 
 
 let form2 = document.getElementById("cadastro");
