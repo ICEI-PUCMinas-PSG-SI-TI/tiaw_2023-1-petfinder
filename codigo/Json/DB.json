@@ -1,0 +1,20 @@
+{
+  "Login": [
+    {
+      "IdLogin": 1,
+      "Email": "login@gmail.com",
+      "Senha": "123"
+    }
+  ],
+
+  "CadastroAnimal": [
+    {
+      "IdAnimal": 1,
+      "Nome": "Caramelo",
+      "Raca": "Vira-lata",
+      "Endereco": "Casa",
+      "Telefone": "123456789",
+      "Descricao": "Descreva"
+    }
+  ]
+}
