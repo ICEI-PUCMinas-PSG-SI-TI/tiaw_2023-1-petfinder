@@ -23,6 +23,16 @@
       "CEP": "25291232"
     }
   ],
+  "CadastroAnimal": [
+    {
+      "IdAnimal": 1,
+      "Nome": "Caramelo",
+      "Raca": "Vira-lata",
+      "Endereco": "Casa",
+      "Telefone": "123456789",
+      "Descricao": "Descreva"
+    }
+  ],
   "CadastroONG": [
     {
       "IdONG": 1,
