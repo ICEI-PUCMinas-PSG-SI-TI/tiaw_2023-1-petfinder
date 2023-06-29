@@ -46,8 +46,6 @@ div h3 {
   margin: 10px;
   padding: 20px;
   background-color: #5271ff;
-
-  display: inline-block;
   display: flex;
   flex-direction: column;
 }
@@ -105,23 +103,5 @@ div h3 {
     width: 230px;
     height: 230px;
     padding: 60px;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .info div {
-    display: inline-block;
-    width: 45%;
-  }
-}
-
-@media screen and (max-width: 885px) {
-  .info div {
-    display: block;
-    width: auto;
-  }
-
-  #icone {
-    width: 200px;
   }
 }
