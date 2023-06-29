@@ -68,10 +68,27 @@ function salvaLogin(e) {
   // Adiciona o usuário no banco de dados
 
   addUser(nome, email, senha, endereco, telefone, cidade, estado, cep);
+  // Resposta(cep);
   alert("Usuário Cadastrado!");
   //   window.location.href = "Login.html";
   // Oculta a div modal do login
   //document.getElementById ('loginModal').style.display = 'none';
 }
+
+// function Resposta(dados) {
+//   if (!("erro" in dados)) {
+//     //Atualiza os campos com os valores.
+//     document.getElementById("txt_cidade").value = (conteudo.localidade);
+//     document.getElementById("txt_estado").value = (conteudo.uf);
+//     document.getElementById("txt_endereco").value = (conteudo.logradouro);
+//     document.getElementById("txt_CEP").value = (conteudo.cep);
+//   } //end if.
+// }
+
+// function PesquisaCEP(cep) {
+//   fetch("https://viacep.com.br/ws/" + cep + "/json/")
+//     .then((res) => res.JSON)
+//     .then((res) => Resposta(res));
+// }
 let form2 = document.getElementById("cadastro");
 form2.addEventListener("submit", salvaLogin);
