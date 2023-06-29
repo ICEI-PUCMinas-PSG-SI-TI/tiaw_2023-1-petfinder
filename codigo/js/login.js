@@ -25,20 +25,13 @@
 
 let form = document.getElementById("formulario");
 
-let Login = [
-  {
-    emailcerto: 'login@gmail.com',
-    senhacerta: '123'
-  }
-]
-
-JSON.parse(localStorage.setItem('Login',JSON.stringify(Login)))
+let cad = JSON.parse(localStorage.getItem('Cadastro'))
 
 function login(e) {
   e.preventDefault();
   let email = document.getElementById("email").value;
   let senha = document.getElementById("senha").value;
-  if (email === Login[0].emailcerto && senha === Login[0].senhacerta) {
+  if (email === cad[0].email && senha === cad[0].senha) {
     window.location.href = "Perfil.html";
   } else {
     alert("Login/senha incorretos!");
