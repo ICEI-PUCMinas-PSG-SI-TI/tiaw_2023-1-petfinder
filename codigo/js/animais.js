@@ -1,46 +1,168 @@
-function LerDB() {
-
-    let requisicao = "Json/DB.json";
+function DadosAnimais() {
+    // const urlParams = new URLSearchParams(window.location.search);
+    let dados =
+      "https://my-json-server.typicode.com/MiguelInacio23/testebd/Animal";
   
-    return fetch(requisicao)
+    fetch(dados)
       .then((res) => res.json())
-      .then((informacoes) => {
-        localStorage.setItem("db_user", JSON.stringify(informacoes));
+      .then((animais) => {
+        mostarAnimais(animais);
+        showNaHome(animais, 2);
       });
-  
   }
   
-  var db_usuarios = {};
-  var usuarioCorrente = {};
-  
-  function BancoDB() {
-    usuarioCorrenteJSON = sessionStorage.getItem("usuarioCorrente");
-  
-    if (usuarioCorrenteJSON) {
-      usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+  function mostarAnimais(animais) {
+    let animaisId = document.getElementById("aroz");
+    var html = animais
+      .map(function (info) {
+        return `<div class="card">
+        <img
+          src="${info.Imagem}"
+          class="card-img-top imagem-cards"
+          alt="..."
+        />
+        <div class="card-body">
+          <h2 class="card-title">${info.Nome}</h2>
+          <p>Encontrado ${info.Perdido}</p>
+          <p>
+            Caso encontre entre em Contato:<strong> ${info.Telefone}</strong>
+          </p>
+          <div
+            class="modal fade"
+            id="exemplo${info.Id}"
+            aria-labelledby=""
+            tabindex="-1"
+            style="display: none"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" >${info.Nome}</h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div>
+                    <img
+                      src="${info.Imagem}"
+                      class="img-fluid imagem-cards"
+                      alt="..."
+                    />
+                  </div>
+                  <br />
+                  <div class="descricao">
+                    <p><strong>Raça:</strong> ${info.Raca}</p>
+                    <p><strong>Cor:</strong> ${info.Cor}</p>
+                    <p><strong>Tamanho:</strong> ${info.Tamanho}</p>
+                    <p>
+                      <strong>Descrição:</strong> ${info.Descricao}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="btn btn-primary"
+            data-bs-target="#exemplo${info.Id}"
+            data-bs-toggle="modal"
+          >
+            Detalhes
+          </button>
+        </div>
+      </div>`;
+      })
+      .join("");
+    if (animaisId) {
+      animaisId.innerHTML += html;
     }
+  }
+  function showNaHome(animais, limite) {
+    let receber = document.getElementById("gg");
+    if (receber) {
+      var ht = animais
+        .slice(0, limite)
+        .map(function (info) {
+          return `<div class="card m-3">
+      <img
+        src="${info.Imagem}"
+        class="card-img-top imagem-cards"
+        alt="..."
+      />
+      <div class="card-body">
+        <h2 class="card-title">${info.Nome}</h2>
+        <p>${info.Perdido}</p>
+        <p>
+          Caso encontre entre em Contato:<strong>${info.Telefone}</strong>
+        </p>
+        <div
+          class="modal fade"
+          id="exemplo${info.Id}"
+          aria-labelledby="exemplo${info.Id}Label"
+          tabindex="-1"
+          style="display: none"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exemplo${info.Id}Label">${info.Nome}</h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div>
+                  <img
+                    src="${info.Imagem}"
+                    class="img-fluid imagem-cards"
+                    alt="..."
+                  />
+                </div>
+                <br />
+                <div class="descricao">
+                  <p><strong>Raça:</strong> ${info.Raca}</p>
+                  <p><strong>Cor:</strong> ${info.Cor}</p>
+                  <p><strong>Tamanho:</strong> ${info.Tamanho}</p>
+                  <p>
+                    <strong>Descrição:</strong> ${info.Descricao}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="btn btn-primary"
+          data-bs-target="#exemplo${info.Id}"
+          data-bs-toggle="modal"
+        >
+          Detalhes
+        </button>
+      </div>
+    </div>`;
+        })
+        .join("");
   
-    var lido_usuarios = localStorage.getItem("db_user");
-    console.log(JSON.parse(lido_usuarios));
-    if (!lido_usuarios) {
-      // Chama a função LerDB para obter os dados do servidor JSON
-      LerDB();
-    } else {
-      // Se há dados no localStorage
-  
-      // Converte a string JSON em objeto colocando no banco de dados baseado em JSON
-      db_usuarios = JSON.parse(lido_usuarios);
+      receber.innerHTML += ht;
+      console.log(ht);
     }
   }
   
-  
-  // Chama a função BancoDB para carregar os dados do localStorage
-  BancoDB();
-
+  window.onload = DadosAnimais;
   var busca = document.getElementById('busca').onclick = pesquisa
 
   function pesquisa(){
     var texto = document.getElementById('pesquisa').value
+    limpa()
     if(texto.length > 0){
         var cards = document.getElementsByClassName('card')
         for(i = 0;i<cards.length;i++){
@@ -50,7 +172,13 @@ function LerDB() {
           texto = texto.toLowerCase()
           if(!textocard.includes(texto)){
             card.style.display = 'none'
+            
           }
         }
     }
+  }
+
+  function limpa(){
+    var texto = document.getElementById('pesquisa')
+    texto.value = ''
   }
