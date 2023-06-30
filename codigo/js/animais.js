@@ -167,6 +167,7 @@ function DadosAnimais() {
         var cards = document.getElementsByClassName('card')
         for(i = 0;i<cards.length;i++){
           var card = cards[i]
+          card.style.display = 'inline-block'
           var textocard = card.textContent
           textocard = textocard.toLowerCase()
           texto = texto.toLowerCase()
