@@ -56,18 +56,18 @@ function addUser(
   //   localStorage.setItem("usuarioCorrente", JSON.stringify(usuarioCorrente));
 }
 
-function limparform() {
-  document.getElementById("txt_nome").value = "";
-  document.getElementById("txt_email").value = "";
-  document.getElementById("txt_senha").value = "";
-  document.getElementById("txt_senha2").value = "";
-  document.getElementById("txt_cidade").value = "";
-  document.getElementById("txt_endereco").value = "";
-  document.getElementById("txt_telefone").value = "";
-  document.getElementById("txt_estado").value = "";
-  document.getElementById("txt_CEP").value = "";
-  document.getElementById("txt_numend").value = "";
-}
+// function limparform() {
+//   document.getElementById("txt_nome").value = "";
+//   document.getElementById("txt_email").value = "";
+//   document.getElementById("txt_senha").value = "";
+//   document.getElementById("txt_senha2").value = "";
+//   document.getElementById("txt_cidade").value = "";
+//   document.getElementById("txt_endereco").value = "";
+//   document.getElementById("txt_telefone").value = "";
+//   document.getElementById("txt_estado").value = "";
+//   document.getElementById("txt_CEP").value = "";
+//   document.getElementById("txt_numend").value = "";
+// }
 
 function salvaLogin(e) {
   // Cancela a submissão do formulário para tratar sem fazer refresh da tela
@@ -95,7 +95,7 @@ function salvaLogin(e) {
   addUser(nome, email, senha, endereco, telefone, cidade, estado, cep, numero);
   // Resposta(cep);
   alert("Usuário Cadastrado!");
-  limparform();
+  // limparform();
   //   window.location.href = "Login.html";
   // Oculta a div modal do login
   //document.getElementById ('loginModal').style.display = 'none';

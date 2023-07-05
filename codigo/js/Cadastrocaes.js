@@ -17,13 +17,13 @@ function generateUUID() {
   });
 }
 
-function limparform() {
-  document.getElementById("txt_nome").value = "";
-  document.getElementById("txt_raca").value = "";
-  document.getElementById("txt_endereco").value = "";
-  document.getElementById("txt_telefone").value = "";
-  document.getElementById("txt_descricao").value = "";
-}
+// function limparform() {
+//   document.getElementById("txt_nome").value = "";
+//   document.getElementById("txt_raca").value = "";
+//   document.getElementById("txt_endereco").value = "";
+//   document.getElementById("txt_telefone").value = "";
+//   document.getElementById("txt_descricao").value = "";
+// }
 
 function addUser(nome, raca, endereco, telefone, descricao) {
   // Cria um objeto de usuario para o novo usuario
@@ -55,7 +55,7 @@ function salvaLogin(e) {
   let descricao = document.getElementById("txt_descricao").value;
   addUser(nome, endereco, telefone, descricao, raca);
   alert("Cachorro Cadastrado!");
-  limparform();
+  // limparform();
   //   window.location.href = "Login.html";
   // Oculta a div modal do login
   //document.getElementById ('loginModal').style.display = 'none';
