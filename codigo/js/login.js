@@ -11,7 +11,6 @@ function loginUser(login, senha) {
     usuarioCorrente.senha === senha
   ) {
     return true;
-
   } else {
     for (var i = 0; i < db_usuarios.Login.length; i++) {
       var usuario = db_usuarios.Login[i];

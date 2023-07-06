@@ -17,7 +17,17 @@ function generateUUID() {
   });
 }
 
-function addUser(nome, email, senha, endereco, telefone, cidade, estado, cep) {
+function addUser(
+  nome,
+  email,
+  senha,
+  endereco,
+  telefone,
+  cidade,
+  estado,
+  cep,
+  numero
+) {
   // Cria um objeto de usuario para o novo usuario
   let newId = generateUUID();
   let Newuser = {
@@ -26,6 +36,7 @@ function addUser(nome, email, senha, endereco, telefone, cidade, estado, cep) {
     Email: email,
     Senha: senha,
     Endereco: endereco,
+    Numero: numero,
     Telefone: telefone,
     Cidade: cidade,
     Estado: estado,
@@ -45,6 +56,19 @@ function addUser(nome, email, senha, endereco, telefone, cidade, estado, cep) {
   //   localStorage.setItem("usuarioCorrente", JSON.stringify(usuarioCorrente));
 }
 
+function limparform() {
+  document.getElementById("txt_nome").value = "";
+  document.getElementById("txt_email").value = "";
+  document.getElementById("txt_senha").value = "";
+  document.getElementById("txt_senha2").value = "";
+  document.getElementById("txt_cidade").value = "";
+  document.getElementById("txt_endereco").value = "";
+  document.getElementById("txt_telefone").value = "";
+  document.getElementById("txt_estado").value = "";
+  document.getElementById("txt_CEP").value = "";
+  document.getElementById("txt_numend").value = "";
+}
+
 function salvaLogin(e) {
   // Cancela a submissão do formulário para tratar sem fazer refresh da tela
   e.preventDefault();
@@ -59,6 +83,7 @@ function salvaLogin(e) {
   let telefone = document.getElementById("txt_telefone").value;
   let estado = document.getElementById("txt_estado").value;
   let cep = document.getElementById("txt_CEP").value;
+  let numero = document.getElementById("txt_numend").value;
 
   if (senha != senha2) {
     alert("As senhas informadas não conferem.");
@@ -67,9 +92,10 @@ function salvaLogin(e) {
 
   // Adiciona o usuário no banco de dados
 
-  addUser(nome, email, senha, endereco, telefone, cidade, estado, cep);
+  addUser(nome, email, senha, endereco, telefone, cidade, estado, cep, numero);
   // Resposta(cep);
   alert("Usuário Cadastrado!");
+  limparform();
   //   window.location.href = "Login.html";
   // Oculta a div modal do login
   //document.getElementById ('loginModal').style.display = 'none';
