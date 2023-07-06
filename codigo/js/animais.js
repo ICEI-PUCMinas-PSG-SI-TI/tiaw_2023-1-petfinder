@@ -1,4 +1,5 @@
-function DadosAnimais() {
+
+/*function DadosAnimais() {
   // const urlParams = new URLSearchParams(window.location.search);
   let dados =
     "https://my-json-server.typicode.com/MiguelInacio23/testebd/Animal";
@@ -10,26 +11,28 @@ function DadosAnimais() {
       showNaHome(animais, 2);
     });
 }
-
+*/
 function mostarAnimais(animais) {
   let animaisId = document.getElementById("aroz");
+  let db = JSON.parse(localStorage.getItem('db_user'))
+  console.log(db.CadastroAnimal[0].Nome)
+  console.log(db.Cor)
   var html = animais
-    .map(function (info) {
-      return `<div class="card">
+  for (i = 0; i < db.CadastroAnimal.length; i++) {
+    animaisId.innerHTML += `<div class="card">
       <img
-        src="${info.Imagem}"
+        src="https://source.unplash.com/raom/200x200/?dog"
         class="card-img-top imagem-cards"
         alt="..."
       />
       <div class="card-body">
-        <h2 class="card-title">${info.Nome}</h2>
-        <p>Encontrado ${info.Perdido}</p>
+        <h2 class="card-title">${db.CadastroAnimal[i].Nome}</h2>
         <p>
-          Caso encontre entre em Contato:<strong> ${info.Telefone}</strong>
+          Caso encontre entre em Contato:<strong> ${db.CadastroAnimal[i].Telefone}</strong>
         </p>
         <div
           class="modal fade"
-          id="exemplo${info.Id}"
+          id="exemplo${db.CadastroAnimal[i].Id}"
           aria-labelledby=""
           tabindex="-1"
           style="display: none"
@@ -38,7 +41,7 @@ function mostarAnimais(animais) {
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" >${info.Nome}</h1>
+                <h1 class="modal-title fs-5" >${db.CadastroAnimal[i].Nome}</h1>
                 <button
                   type="button"
                   class="btn-close"
@@ -49,18 +52,18 @@ function mostarAnimais(animais) {
               <div class="modal-body">
                 <div>
                   <img
-                    src="${info.Imagem}"
+                    src="https://source.unplash.com/raom/200x200/?dog"
                     class="img-fluid imagem-cards"
                     alt="..."
                   />
                 </div>
                 <br />
                 <div class="descricao">
-                  <p><strong>Raça:</strong> ${info.Raca}</p>
-                  <p><strong>Cor:</strong> ${info.Cor}</p>
-                  <p><strong>Tamanho:</strong> ${info.Tamanho}</p>
+                  <p><strong>Raça:</strong> ${db.CadastroAnimal[i].Raca}</p>
+                  <p><strong>Cor:</strong> ${db.CadastroAnimal[i].Cor}</p>
+                  <p><strong>Tamanho:</strong> ${db.Tamanho}</p>
                   <p>
-                    <strong>Descrição:</strong> ${info.Descricao}
+                    <strong>Descrição:</strong> ${db.CadastroAnimal[i].Descricao}
                   </p>
                 </div>
               </div>
@@ -69,19 +72,21 @@ function mostarAnimais(animais) {
         </div>
         <button
           class="btn btn-primary"
-          data-bs-target="#exemplo${info.Id}"
+          data-bs-target="#exemplo${db.CadastroAnimal[i].Id}"
           data-bs-toggle="modal"
         >
           Detalhes
         </button>
       </div>
     </div>`;
-    })
-    .join("");
+  }
   if (animaisId) {
     animaisId.innerHTML += html;
   }
 }
+
+
+
 function showNaHome(animais, limite) {
   let receber = document.getElementById("gg");
   if (receber) {
@@ -157,4 +162,4 @@ function showNaHome(animais, limite) {
   }
 }
 
-window.onload = DadosAnimais;
+window.onload = mostarAnimais;
